@@ -198,10 +198,10 @@ export default Component.extend({
   },
 
   addGlobalEvents() {
-    self.window.addEventListener('scroll', this.runloopAwareReposition);
-    this.scrollableAncestors.forEach((el) => {
-      el.addEventListener('scroll', this.runloopAwareReposition);
-    });
+    //self.window.addEventListener('scroll', this.runloopAwareReposition);
+    //this.scrollableAncestors.forEach((el) => {
+      //el.addEventListener('scroll', this.runloopAwareReposition);
+    //});
     self.window.addEventListener('resize', this.runloopAwareReposition);
     self.window.addEventListener('orientationchange', this.runloopAwareReposition);
   },
@@ -221,10 +221,10 @@ export default Component.extend({
   },
 
   removeGlobalEvents() {
-    self.window.removeEventListener('scroll', this.runloopAwareReposition);
-    this.scrollableAncestors.forEach((el) => {
-      el.removeEventListener('scroll', this.runloopAwareReposition);
-    });
+    // self.window.removeEventListener('scroll', this.runloopAwareReposition);
+    // this.scrollableAncestors.forEach((el) => {
+      // el.removeEventListener('scroll', this.runloopAwareReposition);
+    // });
     self.window.removeEventListener('resize', this.runloopAwareReposition);
     self.window.removeEventListener('orientationchange', this.runloopAwareReposition);
   },
